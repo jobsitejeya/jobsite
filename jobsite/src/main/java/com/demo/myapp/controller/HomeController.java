@@ -1,4 +1,4 @@
-package com.demo.myapp;
+package com.demo.myapp.controller;
 
 import java.sql.SQLException;
 import java.text.DateFormat;
