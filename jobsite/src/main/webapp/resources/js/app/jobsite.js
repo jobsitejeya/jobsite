@@ -41,3 +41,7 @@ app.handleSiginButtonClick = function(){
 app.handleSigninLogin = function(){
 	app.log('Send data to server and check credential');
 };
+
+app.register = function(){
+	
+}

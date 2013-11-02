@@ -12,6 +12,7 @@
 		<org.springframework-version>4.0.0.BUILD-SNAPSHOT</org.springframework-version>
 		<org.aspectj-version>1.6.10</org.aspectj-version>
 		<org.slf4j-version>1.6.6</org.slf4j-version>
+		<sitemesh.version>3.0-alpha-2</sitemesh.version>
 	</properties>
 	<repositories>
 		<repository>
@@ -197,8 +198,13 @@
             <artifactId>tiles-extras</artifactId>
             <version>3.0.0</version>
         </dependency>
-        
-               
+
+
+        <dependency>
+        	<groupId>org.sitemesh</groupId>
+        	<artifactId>sitemesh</artifactId>
+        	<version>${sitemesh.version}</version>
+        </dependency>
 	</dependencies>
     <build>
         <plugins>
@@ -236,7 +242,7 @@
                     <mainClass>org.test.int1.Main</mainClass>
                 </configuration>
             </plugin>
-			<!-- Jetty plugin - required jdk 7--->
+			
              <plugin>
                 <groupId>org.eclipse.jetty</groupId>
                 <artifactId>jetty-maven-plugin</artifactId>

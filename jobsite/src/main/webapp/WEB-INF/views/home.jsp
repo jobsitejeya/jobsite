@@ -4,51 +4,11 @@
 <html>
 <head>
 <title>Welcome to Job Site</title>
-<!-- Bootstrap -->
 
 
-    <link href="/resources/bootstrap/css/bootstrap.min.css" rel="stylesheet" media="screen"/>
-
-<!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
-<!--[if lt IE 9]>
-      <script src="/resources/js/html5shiv.js"></script>
-      <script src="/resources/js/respond.min.js"></script>
-    <![endif]-->
-
-<style>
-body {
-	padding-top: 55px;
-}
-</style>
 
 </head>
 <body>
-
-	<div class="navbar navbar-default navbar-fixed-top">
-		<div class="container">
-			<div class="navbar-header">
-				<a href="/" class="navbar-brand">JobSite</a>
-				<button class="navbar-toggle " type="button" data-toggle="collapse"
-					data-target="#navbar-main">
-					<span class="icon-bar"></span> <span class="icon-bar"></span> <span
-						class="icon-bar"></span>
-				</button>
-			</div>
-			<div class="navbar-collapse collapse" id="navbar-main">
-				<ul class="nav navbar-nav">
-					<li><a href="#"> Menu1 </a></li>
-					<li><a href="#"> Menu2 </a></li>
-					<li><a href="#"> Menu3 </a></li>
-				</ul>
-				<div class="nav navbar-nav navbar-right ">
-					<button type="button" id="btnSignIn" data-toggle="modal" data-target="#myModal"
-						class="btn btn-default navbar-btn" >Sign in</button>
-				</div>
-			</div>
-		</div>
-	</div>
-	
-
 	<div class="modal fade" id="myModal" tabIndex="-1" role="dialog">
 		<div class="modal-dialog">
 			<div class="modal-content">
@@ -90,19 +50,6 @@ body {
 			</div>
 		</div>
 	</div>
-
-
-
-
-	<script src="/resources/js/jquery-2.0.3.js"></script>
-	<!-- Include all compiled plugins (below), or include individual files as needed -->
-	<script src="/resources/bootstrap/js/bootstrap.min.js"></script>
-	<script src="/resources/js/app/jobsite.js"></script>
-	<script type="text/javascript">
-		$(document).ready(function() {
-			app.dir(app);
-			app.init();
-		});
-	</script>
+	
 </body>
 </html>
