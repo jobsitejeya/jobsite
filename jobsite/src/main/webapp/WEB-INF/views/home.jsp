@@ -50,6 +50,6 @@
 			</div>
 		</div>
 	</div>
-	
+	<script src="resources/js/app/jobsite.js"></script>
 </body>
 </html>

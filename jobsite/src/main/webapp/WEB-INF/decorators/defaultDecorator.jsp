@@ -1,6 +1,12 @@
+<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions" %>
 <html>
 <head>
 <title><sitemesh:write property='title' /></title>
+<c:set var="req" value="${pageContext.request}" />
+<c:set var="url">${req.requestURL}</c:set>
+<c:set var="base" value="${fn:substring(url, 0, fn:length(url) - fn:length(req.requestURI))}${req.contextPath}/" />
+<base href="${base}" />
 <!-- Bootstrap -->
 <link href="resources/bootstrap/css/bootstrap.min.css" rel="stylesheet"
 	media="screen" />
@@ -14,6 +20,8 @@ body {
 	padding-top: 55px;
 }
 </style>
+ <script src="resources/js/typeahead.min.js"></script>
+ <script src="resources/js/jquery-2.0.3.js"></script>
 <sitemesh:write property='head' />
 </head>
 <body>
@@ -24,10 +32,10 @@ body {
 		<sitemesh:write property='body' />
 	</div>
 	</div>
-	<script src="resources/js/jquery-2.0.3.js"></script>
+	
 	<!-- Include all compiled plugins (below), or include individual files as needed -->
 	<script src="resources/bootstrap/js/bootstrap.min.js"></script>
-	<script src="resources/js/app/jobsite.js"></script>
+	
 	<script type="text/javascript">
 		$(document).ready(function() {
 			app.dir(app);
