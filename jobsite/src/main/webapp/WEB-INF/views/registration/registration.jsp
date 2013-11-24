@@ -1,174 +1,106 @@
 <!DOCTYPE html>
-<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
-<%@ page session="false"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+<%@ page session="false" %>
 <html>
 <head>
-<title>JobSite - Registration</title>
-
+    <title>JobSite - Registration</title>
+    <%--<link rel="stylesheet" type="text/css" media="all" href="resources/js/selectize/css/selectize.css">--%>
 </head>
 <body>
-	<div class="row">
-		<div class="col-lg-12">
-			<div class="page-header">
-				<h1 id="forms">Registration Form</h1>
-			</div>
-		</div>
-	</div>
-	<div class="row">
-		<div class="col-lg-9">
-			<div class="well">
-				<form class="bs-example form-horizontal"
-					action="/registration/submit" method="post">
-					<fieldset>
-						<!-- Login Details -->
-						<legend>Login Details</legend>
-						<div class="form-group">
-							<label for="inputEmail" class="col-lg-2 control-label">Email
-								*</label>
-							<div class="col-lg-10">
-								<input type="text" class="form-control" name="inputEmail"
-									id="inputEmail" placeholder="Email"> <span
-									class="help-block">This will be your login user name.</span>
-							</div>
-						</div>
+<div class="row">
+    <div class="col-lg-12">
+        <div class="page-header">
+            <h1 id="forms">Registration Form</h1>
+        </div>
+    </div>
+</div>
 
-						<div class="form-group">
-							<label for="inputEmailRe" class="col-lg-2 control-label">Password</label>
-							<div class="col-lg-10">
-								<input type="text" name="inputPassword" class="form-control"
-									id="inputPassword" placeholder="Password">
-							</div>
-						</div>
-						<div class="form-group">
-							<label for="inputRePassword" class="col-lg-2 control-label">Re-enter
-								Password</label>
-							<div class="col-lg-10">
-								<input type="password" name="inputRePassword"
-									class="form-control" id="inputRePassword"
-									placeholder="Re Enter password">
-							</div>
-						</div>
-						<!-- Person Details -->
-						<legend>Person Details</legend>
-						<div class="form-group">
-							<label for="inputFirstName" class="col-lg-2 control-label">First
-								Name *</label>
-							<div class="col-lg-10">
-								<input type="text" class="form-control" name="inputFirstName"
-									id="inputFirstName" placeholder="First Name">
-							</div>
-						</div>
-						<div class="form-group">
-							<label for="inputLastName" class="col-lg-2 control-label">Last
-								Name</label>
-							<div class="col-lg-10">
-								<input type="text" class="form-control" name="inputLastName"
-									id="inputLastName" placeholder="Last Name">
-							</div>
-						</div>
-					
-						<div class="form-group">
-							<label for="inputCurrentLocation" class="col-lg-2 control-label">Current
-								Location</label>
-							<div class="col-lg-10">
-								<input type="text" class="form-control"
-									name="inputCurrentLocation" id="inputCurrentLocation"
-									placeholder="Location">
-							</div>
-						</div>
-						<div class="form-group">
-							<label for="inputMobileNumber" class="col-lg-2 control-label">Mobile
-								Number*</label>
-							<div class="col-lg-10">
-								<input type="text" class="form-control" name="inputMobileNumber"
-									id="inputMobileNumber" placeholder="Mobile Number">
-							</div>
-						</div>
+<div class="container">
+    <div class="row col-lg-7 col-lg-offset-3">
+        <div class="well">
+            <form role="form">
+                <legend>Registration</legend>
 
-						<div class="form-group">
-							<label for="inputSex" class="col-lg-2 control-label">Gender*</label>
-							<div class="col-lg-10">
-								<div class="radio">
-									<label> <input type="radio" name="inputSex"
-										id="inputFemaleSex" value="female"> Female
-									</label>
-								</div>
-								<div class="radio">
-									<label> <input type="radio" name="inputSex"
-										id="inputMaleSex" value="male"> Male
-									</label>
-								</div>
-							</div>
-						</div>
+                <div class="form-group">
+                    <label for="inputEmail">Email</label>
+                    <input type="email" class="form-control input-sm" id="inputEmail" placeholder="Email Address"/>
+                </div>
 
-						<!--  Profession details -->
-						<legend>Professional Details</legend>
-						<div class="form-group">
-							<label for="inputIndustry" class="col-lg-2 control-label">Industry</label>
-							<div class="col-lg-10">
-								<input type="text" class="form-control" name="inputIndustry"
-									id="inputIndustry" placeholder="IT, Accounting, Others....">
-							</div>
-						</div>
+                <div class="form-group">
+                    <label for="inputPassword">Password</label>
+                    <input type="password" class="form-control input-sm" id="inputPassword" placeholder="Password"/>
+                </div>
 
-						<div class="form-group">
-							<label for="inputFucntionalSkills" class="col-lg-2 control-label">Functions</label>
-							<div class="col-lg-10">
-								<input type="text" class="form-control"
-									name="inputFucntionalSkills" id="inputFucntionalSkills"
-									placeholder="Java, Helper, etc.">
-							</div>
-						</div>
-						<div class="form-group">
-							<label for="inputYearsOfExperience"
-								class="col-lg-2 control-label">Experience</label>
-							<div class="col-lg-10">
-								<input type="text" class="form-control"
-									name="inputYearsOfExperience" id="inputYearsOfExperience"
-									placeholder="Year of Experience">
-							</div>
-						</div>
+                <div class="form-group">
+                    <label for="inputRePassword">Re Enter Password</label>
+                    <input type="password" class="form-control input-sm" id="inputRePassword" placeholder="Password"/>
+                </div>
+                <legend>Personal Information</legend>
 
-						<div class="form-group">
-							<label for="inputSkills" class="col-lg-2 control-label">Skills</label>
-							<div class="col-lg-10">
-								<input type="text" class="form-control" name="inputSkills"
-									id="inputSkills" placeholder="Skills">
-							</div>
-						</div>
-						<div class="form-group">
-							<label for="inputResumeFile" class="col-lg-2 control-label">Resume</label>
-							<div class="col-lg-10">
-								 <input class="form-control" 	type="file" id="inputResumeFile">
-								 <span
-									class="help-block">500Kb size allowed. File type allowed - pdf, doc and docx</span>
-							</div>
-						</div>
-						<!--  Policy and acceptance -->
-						<div class="col-lg-10" style="margin-bottom: 10px">
-							<input type="checkbox" > I have read and agree to <a>Jobsite privacy statement</a> and <a>terms of use</a></input>
-						</div>
-						
+                <div class="form-group">
+                    <div class="row">
+                        <div class="col-lg-6">
+                            <label for="inputFirstName">First name</label>
+                            <input type="text" id="inputFirstName " placeholder="First Name"
+                                   class="form-control input-sm"/>
+                        </div>
 
-						<!--  Button to submit -->
-						<div class="form-group">
-							<div class="col-lg-10 col-lg-offset-2">
-								<button class="btn btn-default">Cancel</button>
-								<button type="submit" class="btn btn-primary" id="btnRegSubmit">Submit</button>
-							</div>
-						</div>
-					</fieldset>
-				</form>
-			</div>
-		</div>
-		<div class="col-lg-3">
-			<div class="well">
-				<h4>To Show some advertisement</h4>
-			</div>
-		</div>
-	</div>
-	
-	 <script src="resources/js/app/registration.js"></script>
-	
+                        <div class="col-lg-6">
+                            <label for="inputLastName">Last name</label>
+                            <input type="text" id="inputLastName" placeholder="Last Name"
+                                   class="form-control input-sm"/>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="inputCity">City</label>
+                   <%-- <input type="text" id="inputCity" class=" form-control input-sm"
+                           placeholder="Chennai, Bangalore, Indore etc" value="chennai, bangalore, test"/>--%>
+                    <select id="inputCity" class="form-control input-sm"></select>
+                </div>
+
+                <legend>Professional Info.</legend>
+
+                <div class="form-group">
+                    <label for="inputFunctionalArea">Functional Area</label>
+                    <input type="text" class="form-control input-sm" id="inputFunctionalArea"
+                           placeholder="IT Accounting, others"/>
+                </div>
+
+                <div class="form-group">
+                    <label for="inputSkills">Skills</label>
+                    <input type="text" class="form-control input-sm" id="inputSkills"
+                           placeholder="Java, CA, Nurse, Watchman, etc"/>
+                </div>
+
+                <div class="form-group">
+                    <label for="inputYears">Experience</label>
+
+                    <div class="row">
+                        <div class="col-lg-6"><input type="text" class="form-control input-sm" id="inputYears"
+                                                     placeholder="Years"/></div>
+
+                        <div class="col-lg-6"><input type="text" class="form-control input-sm" id="inputMonths"
+                                                     placeholder="Months"/></div>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="checkbox input-sm" for="checkbox">
+                        <input type="checkbox" id="checkbox">
+                        I agree to terms and conditions
+                    </label>
+                </div>
+
+                <button type="submit" class="btn btn-primary btn-sm">Submit</button>
+                <button class="btn  btn-danger btn-sm">Cancel</button>
+            </form>
+        </div>
+    </div>
+</div>
+
+<script src="resources/js/app/registration.js"></script>
+
 </body>
 </html>

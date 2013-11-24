@@ -13,6 +13,8 @@ http://www.springframework.org/schema/security/spring-security-3.1.xsd">
 		<intercept-url pattern="/logout" access="permitAll" />
 		<intercept-url pattern="/registration/index" access="permitAll" />
 		<intercept-url pattern="/registration/submit" access="permitAll"  />
+        <intercept-url pattern="/registration/cities" access="permitAll"  />
+        <intercept-url pattern="/registration/citiesByName" access="permitAll"  />
 		<intercept-url pattern="/**" access="hasRole('ROLE_USER')" />
 		<form-login login-page="/login/form" login-processing-url="/login"
 			username-parameter="username" password-parameter="password"
